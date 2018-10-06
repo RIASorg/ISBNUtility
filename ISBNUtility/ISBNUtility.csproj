@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>L3tum</Authors>
+    <PackageTags>ISBN</PackageTags>
+    <PackageLicenseUrl>https://github.com/L3tum/SchoolStuff/blob/master/ISBNUtility/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/L3tum/SchoolStuff/blob/master/ISBNUtility</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/L3tum/SchoolStuff/blob/master/ISBNUtility</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <Description>ISBNUtility tries to provide easy-to-use functions for anything ISBN. 
+From converting between ISBN-10 to ISBN-13 (and vice versa) to hyphenating any ISBN and searching an ISBN database for information.</Description>
+    <Copyright>L3tum</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Tom\source\repos\SchoolStuff\ISBNUtility\ISBNUtility.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ISBNRanges.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
